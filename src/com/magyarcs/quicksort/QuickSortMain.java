@@ -1,5 +1,7 @@
 package com.magyarcs.quicksort;
 
+import java.util.ArrayList;
+
 public class QuickSortMain {
     ArrayList<Integer> array = new ArrayList<>();
     
@@ -18,22 +20,22 @@ public class QuickSortMain {
     }
 
     private int partition(ArrayList<Integer> array, int low, int high) {
-        int pivot = A[low + (high - low) / 2];
-        while (A[low] < pivot) {
+        int pivot = array.get(low + (high - low) / 2);
+        while (array.get(low) < pivot) {
             low += 1;
         }
 
-        while (A[high] > pivot) {
+        while (array.get(high) > pivot) {
             high -= 1;
         }
         
-        if (lo >= hi) {
+        if (low >= high) {
             return high;
         } 
             
-        swap(array[low], array[high]);
+        swap(array.get(low), array.get(high);
 
-        low := low + 1
-        high := high - 1
+        low := low + 1;
+        high := high - 1;
     }
 }
