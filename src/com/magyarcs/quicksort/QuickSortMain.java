@@ -3,15 +3,15 @@ package com.magyarcs.quicksort;
 import java.util.ArrayList;
 
 public class QuickSortMain {
-    ArrayList<Integer> array = new ArrayList<>();
+    private static ArrayList<Integer> array = new ArrayList<>();
     
 
     private static void main(String[] args) {
-        array.addAll(5,12,51,32,512,6341,3215,31);
-        quickSort(array, 0, array.length - 1);
+        array.add(5);
+        quickSort(array, 0, array.size() - 1);
     }
 
-    private void quickSort(ArrayList<Integer> array, int low, int high) {
+    private static void quickSort(ArrayList<Integer> array, int low, int high) {
         if (low > high) {
             int p = partition(array, low, high);
             quickSort(array, low, p);
@@ -19,7 +19,7 @@ public class QuickSortMain {
         }
     }
 
-    private int partition(ArrayList<Integer> array, int low, int high) {
+    private static int partition(ArrayList<Integer> array, int low, int high) {
         int pivot = array.get(low + (high - low) / 2);
         while (array.get(low) < pivot) {
             low += 1;
@@ -33,9 +33,10 @@ public class QuickSortMain {
             return high;
         } 
             
-        swap(array.get(low), array.get(high);
 
-        low := low + 1;
-        high := high - 1;
+
+        low = low + 1;
+        high = high - 1;
+        return 0;
     }
 }
