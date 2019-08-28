@@ -92,4 +92,14 @@ public class AtomContainer {
         }
         return atoms;
     }
+
+    public boolean containsByName (Atom currentAtom) {
+        for (Atom atom : atoms
+             ) {
+            if (atom.getName().equalsIgnoreCase(currentAtom.getName())) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
